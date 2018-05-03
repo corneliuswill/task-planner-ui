@@ -52,6 +52,6 @@ List of technology used:
 
 ## Running the Tests
 
-    ````bash
-    npm test
-    ````
+   ````bash
+   npm test
+   `````
