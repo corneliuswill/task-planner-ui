@@ -4,14 +4,16 @@ Basic Todo application demo.
 
 ## Screenshots
 
+![Todo Demo](images/react-todo-demo.png)
+
 ## Technical Details
 
 List of technology used:
 
-* Node
-* React
-* JavaScript
-* Cucumber.js
+* [Node](https://nodejs.org/en/)
+* [React](https://reactjs.org/)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Cucumber](https://cucumber.io/)
 
 ## Features
 
