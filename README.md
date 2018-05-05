@@ -4,7 +4,11 @@ Basic Todo application demo.
 
 ## Screenshots
 
-![Todo Demo](images/react-todo-demo.png)
+![Login](/images/Login.png)
+
+![Forgot Password](/images/ForgotPassword.png)
+
+![Reset Password](/images/ResetPassword.png)
 
 ## Technical Details
 
