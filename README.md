@@ -10,6 +10,8 @@ Basic Todo application demo.
 
 ![Reset Password](/images/ResetPassword.png)
 
+![Main](/images/Main.png)
+
 ## Technical Details
 
 List of technology used:
