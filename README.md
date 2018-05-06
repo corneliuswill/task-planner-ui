@@ -4,9 +4,9 @@ Basic Todo application demo.
 
 ## Screenshots
 
-![Login](/images/Login.png) ![Forgot Password](/images/ForgotPassword.png)
+![Login](/screenshots/Login.png) ![Forgot Password](/screenshots/ForgotPassword.png)
 
-![Reset Password](/images/ResetPassword.png) ![Main](/images/Main.png)
+![Reset Password](/screenshots/ResetPassword.png) ![Main](/screenshots/Main.png)
 
 ## Technical Details
 

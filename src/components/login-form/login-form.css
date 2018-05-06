@@ -1,0 +1,56 @@
+.logo {
+    margin: 0 auto;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  .app-icon {
+    margin: 1rem auto;
+  }
+  
+  .form-signin {
+    color: #FFF;
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  
+  .form-signin a {
+    color: #FFF;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .product-branding {
+    color: #FFF;
+    margin: 5rem 0 1.5rem 0;
+  }
+  
+  .product-name {
+    font-size: 1.75rem;
+  }
+  
+  .form-input {
+    margin-bottom: 1rem;
+  }
+  
+  .forgot-pwd {
+    margin: 1.5rem 0 1rem 0;
+  }
+  
+  .forgot-pwd a {
+    color: #FFF;
+  }
+  
+  .seperator {
+    background-color: #FFF;
+    height: 1px;
+    margin-bottom: 1rem;
+  }
