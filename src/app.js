@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import './css/app.css';
 import './css/core-ui.css';
-import LoginForm from './components/login-form/login-form';
+import {Route, Switch} from 'react-router-dom';
+import Login from './routes/login.jsx';
+import ForgetPasswd from './routes/forget-passwd.jsx';
 
 class App extends Component {
   componentDidMount() {
@@ -13,23 +15,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className="main">
-              <div className="product-branding text-center">
-                <div className="logo">
-                  <div className="app-icon">
-                    <img src={logo}/>
-                  </div>
-                </div>
-                <h1 className="product-name">My Todo</h1>
-              </div>
-              <LoginForm/>
-            </div>
-          </div>
-        </div>
-      </div>
+    <Switch>
+      <Route exact path='/' component={Login}/>
+      <Route path='/forget-passwd' component={ForgetPasswd}/>
+      
+    </Switch>
     );
   }
 }
