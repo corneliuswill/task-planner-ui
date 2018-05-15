@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+body {
+
+}
+
+.greeting {
+    color: #FFF;
+=======
 img,
 embed,
 object,
@@ -18,4 +26,5 @@ bg-blue-green {
 button.primary {
     width: 327px;
     height: 48px;
+>>>>>>> dev
 }
