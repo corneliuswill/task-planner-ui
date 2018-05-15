@@ -3,7 +3,6 @@ import logo from './todo-logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import './css/app.css';
-import './css/core-ui.css';
 import {Route, Switch} from 'react-router-dom';
 import Login from './routes/login.jsx';
 import ForgetPasswd from './routes/forget-passwd.jsx';
