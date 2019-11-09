@@ -1,9 +1,9 @@
 body {
-
-}
-
-.greeting {
+    background: linear-gradient(to bottom, rgba(21,123,143,1) 0%, rgba(53,172,156,1) 100%);
+    font-family: sans-serif; 
     color: #FFF;
+    margin: 0;
+    padding: 0; 
 }
 
 img,
