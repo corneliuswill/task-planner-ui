@@ -1,5 +1,5 @@
 // create store
-function createStore(reducer) {
+export default function createStore(reducer) {
     // The store should have 4 parts
     // 1. The state
     // 2. Get the state
@@ -25,15 +25,7 @@ function createStore(reducer) {
 
     return {
         getState,
-        subscribe
+        subscribe,
+        dispatch
     }
 }
-
-const store = createStore();
-store.subscribe(() => {
-    console.log('The new state is: ', store.get);
-})
-
-store.subscribe(() => {
-    console.log('The store changed.');
-})

@@ -3,4 +3,4 @@ import * as components from './components';
 import * as constants from './constants';
 import reducer from './reducer';
 
-export { actions, components, constants, reducer/*, selectors*/ };
+export default { actions, components, constants, reducer, /*selectors*/ };

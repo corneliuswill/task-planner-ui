@@ -10,12 +10,16 @@ Basic Todo application demo.
 
 ## Technical Details
 
-List of technology used:
+Implementation
 
 * [Node](https://nodejs.org/en/)
 * [React](https://reactjs.org/)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+Testing
+
 * [Cucumber](https://cucumber.io/)
+  
 
 ## Features
 
