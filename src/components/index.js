@@ -1,4 +1,4 @@
-import App from './app/app'
+import App from './app/app.js'
 import TodoList from './todo-list/todo-list'
 import Todo from './todo/todo'
 import FloatingButton from './floating-button/floating-button'
