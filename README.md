@@ -62,4 +62,4 @@ Testing
 
    ````bash
    npm test
-   `````gi t
+   ````
