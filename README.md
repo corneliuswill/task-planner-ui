@@ -38,12 +38,12 @@ Testing
 1. git clone react todo demo
 
     ````bash
-    git clone https://github.com/corneliuswill/react-todo-demo.git
+    git clone https://github.com/corneliuswill/todo-app.git
     ````
     then
 
     ````bash
-    cd react-todo-demo
+    cd todo-app
     ````
 
 2. Install packages
@@ -62,4 +62,4 @@ Testing
 
    ````bash
    npm test
-   `````
+   `````gi t

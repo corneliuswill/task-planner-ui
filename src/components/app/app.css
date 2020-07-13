@@ -1,0 +1,72 @@
+body {
+    background-color: #FAFAFA;
+    /*background: linear-gradient(to bottom, rgba(21,123,143,1) 100%, rgba(53,172,156,1) 100%);*/
+    margin: 0;
+    padding: 0; 
+}
+
+#app {
+    height: 100vh;
+}
+
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+a {
+    color: #333;
+}
+
+nav a, button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.home,
+.dashboard,
+.signup,
+.reset,
+.not-found {
+    padding-top: 16px;
+}
+
+.not-found {
+    text-align: center;
+}
+
+.actionGroup {
+    margin: 16px;
+}
+
+.action-group-button {
+    margin-bottom: 24px;
+}
+
+.action-group-link {
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.button-primary {
+    color: #FFF;
+    background-color: #028090;
+    border-color: #028090;
+}
+
+/* Type */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.app-bar-right {
+
+}

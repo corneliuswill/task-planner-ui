@@ -1,56 +1,45 @@
-.logo {
-    margin: 0 auto;
-  }
-  
-  .main {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-  }
-  
-  .app-icon {
-    margin: 1rem auto;
-  }
-  
-  .form-signin {
-    color: #FFF;
-    width: 100%;
-    max-width: 420px;
-    padding: 15px;
-    margin: 0 auto;
-  }
-  
-  .form-signin a {
-    color: #FFF;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .product-branding {
-    color: #FFF;
-    margin: 5rem 0 1.5rem 0;
-  }
-  
-  .product-name {
-    font-size: 1.75rem;
-  }
-  
-  .form-input {
-    margin-bottom: 1rem;
-  }
-  
-  .forgot-pwd {
-    margin: 1.5rem 0 1rem 0;
-  }
-  
-  .forgot-pwd a {
-    color: #FFF;
-  }
-  
-  .seperator {
-    background-color: #FFF;
-    height: 1px;
-    margin-bottom: 1rem;
-  }
+.login {
+  padding: 40px 0;
+  text-align: center;
+  height: 100%;
+}
+
+img.logo {
+  border-radius: 10px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.seperator {
+  background-color: #EEEEEE;
+  height: 2px;
+  margin-bottom: 1rem;
+}

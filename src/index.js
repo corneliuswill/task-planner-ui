@@ -1,63 +1,49 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter } from 'react-router-dom';
-//import { Provider } from 'react-redux';
-//import { createStore, applyMiddleware } from 'redux';
-//import reduxThunk from 'redux-thunk';
-//import reducers from './reducers';
-//const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+import React from 'react'
+import ReactDOM from 'react-dom'
+import registerServiceWorker from './registerServiceWorker'
+import { Provider } from 'react-redux'
 
-import createStore from './configureStore';
-import reducer from './rootReducer'
-import { components } from './app';
-import { addTodoAction, removeTodoAction, toggleTodoAction } from './todos/actions';
-import { addGoalAction } from './goals/actions';
+import { AppContainer } from './containers'
+import configureStore from './configure-store'
 
-const store = createStore(reducer);
+import { addTodoAction } from './actions/todos'
+import { setVisibilityFilterAction, VisibilityFilters } from './actions/visibility-filter'
 
-store.subscribe(() => {
-    console.log('The new state is: ', store.getState());
-})
+const store = configureStore()
 
-store.dispatch(addTodoAction({
-    id: 0,
-    name: 'Learn Redux',
-    complete: false
-}))
+// Log the initial state
+console.log('Initial State', store.getState())
 
-store.dispatch(addTodoAction({
-    id: 1,
-    name: 'Create First Video Tutorial',
-    complete: false
-}))
+// Every time the state changes, log it
+// Note that subscribe() returns a function for unregistering the listener
+const unsubscribe = store.subscribe(() => console.log(store.getState()))
 
-store.dispatch(addTodoAction({
-    id: 2,
-    name: 'Create Blog',
-    complete: false
-}))
+// Dispatch some actions
+store.dispatch(addTodoAction('File taxes'))
+store.dispatch(addTodoAction('Research on how to lower property taxes'))
+store.dispatch(addTodoAction('Refinance'))
+store.dispatch(addTodoAction('Setup house monitoring'))
+store.dispatch(addTodoAction('Finish App design'))
 
-store.dispatch(addGoalAction({
-    id: 0,
-    name: '10000 subscribers',
-    complete: false
-}))
+store.dispatch(setVisibilityFilterAction(VisibilityFilters.SHOW_ALL))
 
-store.dispatch(addGoalAction({
-    id: 1,
-    name: '$100000/month',
-    complete: false
-}))
+// Stop listening to state updates
+unsubscribe()
 
-store.dispatch(removeTodoAction(0));
-store.dispatch(toggleTodoAction(1));
+const renderApp = () => {
+    ReactDOM.render(
+        <Provider store={store}>
+            <AppContainer />
+        </Provider>,
+        document.getElementById('root')
+    )
+}
 
-const App = components.App;
+if (process.env.NODE_ENV !== 'production' && module.hot) {
+    module.hot.accept(AppContainer, renderApp)
+}
 
-ReactDOM.render(
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>, 
-    document.getElementById('root'));
-registerServiceWorker();
+renderApp()
+
+registerServiceWorker()
+
