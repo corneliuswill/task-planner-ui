@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 
-import ThinkingEmoji from '../../assets/images/thinking-emoji.png'
+import ThinkingEmoji from '../assets/images/thinking-emoji.png'
 
 const NotFound = (props) => {
     return (
@@ -19,8 +19,8 @@ const NotFound = (props) => {
             </div>
 
             <div className="action-items">
-                <button 
-                    type="button" 
+                <button
+                    type="button"
                     className="btn btn-primary btn-lg btn-block active"
                     onClick={() => props.history.push('/')}
                 >

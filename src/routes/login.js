@@ -4,8 +4,8 @@ import { useHistory, useLocation } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 
-import logo from '../../logo.png';
-import styles from './login.css';
+import logo from '../logo.png';
+import styles from './routes.css';
 
 function Login(props) {
   const [userId, setUserId] = useState('')

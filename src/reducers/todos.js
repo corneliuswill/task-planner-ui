@@ -14,9 +14,21 @@ export default function todos (state = INITIAL_STATE, action) {
         case actions.DELETE_TODO:
             return state.filter((todo) => todo.id !== action.id)
         case actions.TOGGLE_TODO:
-            return [...state]
+            return updateObjectInArray(state, action)
         default:
             return state
     }
 }
 
+function updateObjectInArray(array, action) {
+    return array.map((item, index) => {
+        if (item.id !== action.id) {
+            return item
+        }
+
+        return {
+            ...item,
+            completed: !action.completed
+        }
+    })
+}

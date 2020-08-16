@@ -6,7 +6,7 @@ const Dashboard = (props) => {
 
     useEffect(() => {
         displayLargeTitle(false)
-        handleScreenChange('Dashboard', '#FAFAFA')
+        handleScreenChange('Dashboard', /* #FAFAFA*/ '#EFF2D5')
     })
 
     return (
@@ -87,10 +87,14 @@ const Dashboard = (props) => {
                     >
                         <div className='d-flex w-100 justify-content-between'>
                             All Tasks
-                            <small>13</small>
+                            <small>14</small>
                         </div>
                     </Link>
                 </li>
+            </ul>
+            
+            <ul>
+
             </ul>
         </div>
     )

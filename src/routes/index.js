@@ -1,10 +1,10 @@
-import Tasks from './tasks/tasks'
-import Login from './login/login'
-import SignUp from './signup/signup'
-import ResetPassword from './reset/reset'
-import Dashboard from './dashboard/dashboard'
-import Settings from './settings/settings'
-import NotFound from './not-found/not-found'
+import Tasks from './tasks'
+import Login from './login'
+import SignUp from './signup'
+import ResetPassword from './reset'
+import Dashboard from './dashboard'
+import Settings from './settings'
+import NotFound from './not-found'
 
 export {
     Tasks,

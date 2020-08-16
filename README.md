@@ -2,24 +2,20 @@
 
 Basic Todo application demo.
 
-## Screenshots
-
-![Login](/screenshots/Login.png) ![Forgot Password](/screenshots/ForgotPassword.png)
-
-![Reset Password](/screenshots/ResetPassword.png) ![Main](/screenshots/Main.png)
+## UI
 
 ## Technical Details
 
 Implementation
 
 * [Node](https://nodejs.org/en/)
-* [React](https://reactjs.org/)
+* [React](https://reactjs.org/) & [Redux](https://redux.js.org/)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 Testing
 
 * [Cucumber](https://cucumber.io/)
-  
+
 
 ## Features
 
