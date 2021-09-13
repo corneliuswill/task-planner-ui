@@ -1,0 +1,41 @@
+.task-panel-header {
+    position: relative;
+}
+
+.task-panel-header .options-button {
+    position: absolute;
+    top: 16px;
+    right: 0px;
+    padding: 0px 8px;
+    margin: 0px;
+    border-radius: 4px;
+    background-color: #303030;
+    color: #FFF;
+}
+
+.task-panel-header .options-button:hover {
+    background-color: #282828;
+}
+
+.task-panel-header .options-button:focus {
+    background-color: #303030;
+}
+
+
+.task-panel-body {
+    height: calc(100vh - 224px);
+    overflow-y: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.task-panel-body::-webkit-scrollbar {
+    display: none;
+}
+
+input:focus {
+    border: none;
+}
+

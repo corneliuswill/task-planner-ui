@@ -1,0 +1,41 @@
+.app-header-container {
+    position: relative;
+    background-color: #313866;
+    color: #FFF;
+}
+
+#logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#avatar {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+}
+
+.app-header-container .menu-button {
+    position: absolute;
+    line-height: normal;
+    top: 14px;
+    /*left: 0px;
+    color: #FFF;
+    background-color: #313866;
+    border: 1px solid #FFF;
+    padding: 0;
+    width: 40px;
+    height: 40px; */
+}
+
+.app-header-container .app-header {
+    height: 60px;
+    line-height: 60px;
+}
+
+.app-header-container .supplemental {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}

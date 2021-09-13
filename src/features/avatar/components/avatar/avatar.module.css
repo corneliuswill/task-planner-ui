@@ -1,0 +1,19 @@
+.circle {
+    background-color: #557883;
+    border-radius: 50%;
+}
+
+.large {
+    height: 48px;
+    width: 48px;
+}
+
+.medium {
+    height: 32px;
+    width: 32px;
+}
+
+.small {
+    height: 24px;
+    width: 24px;
+}

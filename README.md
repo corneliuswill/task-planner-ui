@@ -1,23 +1,39 @@
-# React Todo Demo
+# React Todo App Demo
 
-Basic Todo application demo.
-
-## UI
+Todo App created in React.
 
 ## Technical Details
 
-Implementation
+### Implementation
 
 * [Node](https://nodejs.org/en/)
 * [React](https://reactjs.org/) & [Redux](https://redux.js.org/)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-Testing
+### Testing
 
-* [Cucumber](https://cucumber.io/)
+* [Jest](https://jestjs.io/)
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+* [Cypress](https://www.cypress.io/)
 
+### Project Folder Structure
 
-## Features
+```
+src/
+    api/
+    app/
+    assets/
+    common/
+    config/
+    enhancers/
+    features/
+    middleware/
+    routes/
+    index.js
+    root-reducer
+```
+
+# Features
 
 * A User can create an account
 * A User can login and view their todo lists
@@ -59,3 +75,7 @@ Testing
    ````bash
    npm test
    ````
+
+
+## Mock Server
+

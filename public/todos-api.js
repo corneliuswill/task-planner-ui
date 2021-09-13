@@ -1,5 +1,5 @@
 (function() {
-    window.API = {}
+    window.API = window.API || {};
 
     let todos = {
         "wb3m1rcbu3t98qsb39iv": {
@@ -55,34 +55,38 @@
         }
     }
 
-    API.todos = (request) => {
+    API.todos = (request = { method : 'get' }) => {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                switch(request.method) {
-                    case 'get':
-                        response = {
-                            status: 200,
-                            todoById: {
-                                ...todos
+            try {
+                setTimeout(() => {
+                    switch(request.method) {
+                        case 'get':
+                            response = {
+                                status: 200,
+                                todoById: {
+                                    ...todos
+                                }
                             }
-                        }
 
-                        resolve(response)
-                        break
-                    case 'post':
-                        response = {
-                            status: 200,
-                            todoById: {
-                                ...todos,
-                                [request.body.id]: request.body
+                            resolve({...response})
+                            break
+                        case 'post':
+                            response = {
+                                status: 200,
+                                todoById: {
+                                    ...todos,
+                                    [request.body.id]: request.body
+                                }
                             }
-                        }
-                        resolve(response)
-                        break
-                    default:
-                        resolve({ status: 400, message: 'Bad Request' })
-                }
-            }, 1000)
+                            resolve(response)
+                            break
+                        default:
+                            resolve({ status: 400, message: 'Bad Request' })
+                    }
+                }, 1000)
+            } catch(error) {
+                reject(`Error getting todos: ${error}`)
+            }
         })
     }
 

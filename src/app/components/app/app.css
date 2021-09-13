@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0; 
+}
+
+#app {
+    height: 100vh;
+}
+
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+nav a, button {
+    /* min-width: 48px;
+    min-height: 48px; */
+}
+
+.home,
+.dashboard,
+.signup,
+.reset,
+.not-found {
+    padding-top: 16px;
+}
+
+.not-found {
+    text-align: center;
+}
+
+.actionGroup {
+    margin: 16px;
+}
+
+.action-group-button {
+    margin-bottom: 24px;
+}
+
+.action-group-link {
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.button-primary {
+    color: #FFF;
+    background-color: #028090;
+    border-color: #028090;
+}
+
+/* Type */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.app-container {
+    /* display: flex;
+    width: 100%;  */
+}
+
+.app-sidebar-container {
+    position: absolute;
+    top: 60px;
+    left: -320px;
+    visibility: hidden;
+    background-color: #50409A;
+    color: #FFF;
+    height: calc(100vh - 60px);
+    z-index: 9999;
+}
+
+@media (max-width: 767.98px) {
+    .app-sidebar-container  {
+      width: 320px;
+      transition: left 0.2s linear;
+    }
+}
+
+@media (min-width: 768px) {
+    .app-sidebar-container {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        visibility: visible;
+    }
+
+    #nav-button {
+        display: none;;
+    }
+
+    #logo {
+        text-align: left;
+        font-weight: 100;
+    }
+}
+
+.show-menu {
+    visibility: visible;
+    left: 0px;
+    /* transition: left 0.5s linear; */
+}
+
+.hide-menu {
+    transition: left 0.5s linear;
+}
+
+.app-content-container {
+    position: relative;
+    background-color: #1E1E1E;
+    /* flex-grow: 1; */
+    height: calc(100vh - 60px);
+}
+
+.app-main-inner {
+    position: relative;
+    opacity: 95%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Fonts */
+.font-700 {
+    font-weight: 700;
+}

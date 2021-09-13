@@ -1,0 +1,15 @@
+.menu-item-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    text-align: left;
+    width: 100%;
+    transition-duration: 0.4s;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.menu-item-button:hover {
+    background-color: #008CBA;
+}
