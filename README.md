@@ -1,6 +1,6 @@
-# React Todo App Demo
+# Task Planner Demo App
 
-Todo App created in React.
+Task Planner Demo App created for training, and conveying best practices in frontend application development using the React UI Library.
 
 ## Technical Details
 
@@ -33,7 +33,7 @@ src/
     root-reducer
 ```
 
-# Features
+# Features List
 
 * A User can create an account
 * A User can login and view their todo lists
@@ -50,12 +50,12 @@ src/
 1. git clone react todo demo
 
     ````bash
-    git clone https://github.com/corneliuswill/todo-app.git
+    git clone https://github.com/corneliuswill/task-planner-ui.git
     ````
     then
 
     ````bash
-    cd todo-app
+    cd task-planner-ui
     ````
 
 2. Install packages
