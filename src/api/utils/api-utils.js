@@ -1,6 +1,7 @@
 import lists from '../data/lists';
 import tasks from '../data/tasks';
 import user from '../data/user';
+import notifications from '../data/notifications';
 
 export function generateUID () {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
@@ -45,6 +46,16 @@ export function getLists () {
       setTimeout(() => res([...lists]), 1000)
     } catch(error) {
       rej(`Error getting lists: ${error}`)
+    }
+  })
+}
+
+export function getNotifications() {
+  return new Promise((res, rej) => {
+    try {
+      setTimeout(() => res([...notifications]), 1000)
+    } catch(error) {
+      rej(`Error getting notifications: ${error}`);
     }
   })
 }
