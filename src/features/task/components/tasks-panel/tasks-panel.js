@@ -51,6 +51,11 @@ const TitleTextBox = styled.input`
     margin: 0;
     width: 100%
 `
+const NoTasksText = styled.p`
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+`
 
 // const bgImage = {
 //     backgroundImage: 'url("../assets/images/mv.jpg")',
@@ -76,7 +81,7 @@ function TasksPanel({list, tasks}) {
         dispatch(toggleCompleteTaskAction(id))
     }
 
-    const handleAddTask = (e) => {
+    const onAddTask = (e) => {
         if (e.key === 'Enter') {
             dispatch(addTaskAction(e.target.value, list.id));
             setText('');
@@ -134,9 +139,10 @@ function TasksPanel({list, tasks}) {
         }
     }
 
-    const handleOptionsClick = (e) => {
+    const onOptionsClick = (e) => {
         // TODO: show options menu
         console.log(e.target, e.clientX, e.clientY);
+        console.log('this is:', this);
     }
 
     useEffect(() => {
@@ -166,16 +172,17 @@ function TasksPanel({list, tasks}) {
                 <DateText className="date">{today}</DateText>
                 </>
                 }
-                <button className="options-button button-unstyled" onClick={(e) => handleOptionsClick(e)}>
+                <button className="options-button button-unstyled" onClick={onOptionsClick}>
                     <i className="bi bi-three-dots"></i>
                 </button>
                 <PopupMenu/>
             </div>
             <div className="task-panel-body">
-                { tasks ?
+                {/* TODO: fix to show All Empty by list */}
+                { tasks.length > 0 ?
                 <List tasks={filteredTasks} onTaskClick={handleCompleteTask}/>
                 :
-                    <p>No Tasks</p>
+                    <NoTasksText>All Empty</NoTasksText>
                 }
             </div>
             <InputContainer>
@@ -183,7 +190,7 @@ function TasksPanel({list, tasks}) {
                     value={text}
                     placeholder="&#43; Add a Task"
                     onChange={(e) => setText(e.target.value)}
-                    onKeyPress={(e) => handleAddTask(e)}
+                    onKeyPress={(e) => onAddTask(e)}
                 />
             </InputContainer>
         </div>
