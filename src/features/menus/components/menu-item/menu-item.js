@@ -10,8 +10,8 @@ function MenuItem(props) {
     return (
         <div className="menu-item-wrapper">
             <button
-                className="menu-item-button"
                 type="button"
+                className="menu-item-button"
                 onClick={onClick}
             >
             {React.Children.map(children, (child, index) => (<span key={index} className="menu-item-text">{child}</span>))}
