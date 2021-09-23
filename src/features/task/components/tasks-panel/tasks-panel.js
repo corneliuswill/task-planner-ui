@@ -171,7 +171,7 @@ function TasksPanel({list, tasks}) {
                 <DateText className="date">{today}</DateText>
                 </>
                 }
-                <button type="button" className="options-button button-unstyled" onClick={onOptionsClick}>
+                <button type="button" className="unstyled-button options-button" onClick={onOptionsClick}>
                     <i className="bi bi-three-dots"></i>
                 </button>
                 <PopupMenu/>

@@ -10,7 +10,7 @@ ul {
 
 }
 
-/* .button-unstyled {
+/* .unstyled-button {
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
@@ -28,39 +28,40 @@ ul {
     -moz-appearance: none;
 }
 
-.button-unstyled:hover,
-.button-unstyled:focus {
+.unstyled-button:hover,
+.unstyled-button:focus {
     background: #0053ba;
 }
 
-.button-unstyled:focus {
+.unstyled-button:focus {
     outline: 1px solid #fff;
     outline-offset: -4px;
 }
 
-.button-unstyled:active {
+.unstyled-button:active {
     transform: scale(0.99);
 } */
 
-.button-unstyled {
+.unstyled-button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    margin: .375rem;
+}
+
+.unstyled-button:hover {
     background: transparent;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
 }
 
-.button-unstyled:hover {
-    background: transparent;
-    box-shadow: 0px 0px 0px transparent;
-    border: 0px solid transparent;
-    text-shadow: 0px 0px 0px transparent;
-}
-
-.button-unstyled:active {
+.unstyled-button:active {
     outline: none;
     border: none;
 }
 
-.button-unstyled:focus {
+.unstyled-button:focus {
     outline: 0;
 }
