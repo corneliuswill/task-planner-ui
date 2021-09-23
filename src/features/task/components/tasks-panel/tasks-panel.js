@@ -142,7 +142,6 @@ function TasksPanel({list, tasks}) {
     const onOptionsClick = (e) => {
         // TODO: show options menu
         console.log(e.target, e.clientX, e.clientY);
-        console.log('this is:', this);
     }
 
     useEffect(() => {
