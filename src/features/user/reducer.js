@@ -1,6 +1,11 @@
 import * as actions from './actions'
 
-export default function user (state = null, action) {
+const INITIAL_STATE = {
+    name: null,
+    avatarUrl: null,
+}
+
+export default function user (state = INITIAL_STATE, action) {
     switch(action.type) {
         case actions.GET_USER:
             return {
