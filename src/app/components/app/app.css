@@ -1,55 +1,5 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0; 
-}
-
 #app {
     height: 100vh;
-}
-
-img,
-embed,
-object,
-video {
-    max-width: 100%;
-}
-
-nav a, button {
-    /* min-width: 48px;
-    min-height: 48px; */
-}
-
-.home,
-.dashboard,
-.signup,
-.reset,
-.not-found {
-    padding-top: 16px;
-}
-
-.not-found {
-    text-align: center;
-}
-
-.actionGroup {
-    margin: 16px;
-}
-
-.action-group-button {
-    margin-bottom: 24px;
-}
-
-.action-group-link {
-    margin-bottom: 16px;
-    font-weight: 700;
-}
-
-.button-primary {
-    color: #FFF;
-    background-color: #028090;
-    border-color: #028090;
 }
 
 /* Type */
@@ -59,7 +9,6 @@ h3,
 h4,
 h5,
 h6 {
-    color: #FFFFFF;
     line-height: 1.6;
 }
 
@@ -129,7 +78,26 @@ h6 {
     overflow-x: hidden;
 }
 
-/* Fonts */
-.font-700 {
-    font-weight: 700;
+.unstyled-button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    margin: .375rem;
+}
+
+.unstyled-button:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.unstyled-button:active {
+    outline: none;
+    border: none;
+}
+
+.unstyled-button:focus {
+    outline: 0;
 }
