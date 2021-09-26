@@ -1,4 +1,4 @@
-# Task Planner Demo App
+# Task Planner App Demo
 
 Task Planner Demo App created for training, and conveying best practices in frontend application development using the React UI Library.
 
@@ -69,5 +69,4 @@ src/
    ````
 
 
-## Mock Server
 
