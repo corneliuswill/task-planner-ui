@@ -24,30 +24,22 @@ src/
     app/
     assets/
     common/
-    config/
+    configs/
     enhancers/
     features/
+    hooks/
     middleware/
     routes/
+    sagas/
+    store/
+    stories/
     index.js
     root-reducer
 ```
 
-# Features List
-
-* A User can create an account
-* A User can login and view their todo lists
-* A User can create multiple todo lists
-* A User can add todo item to the list
-* A User can mark a todo item as complete
-* A User can delete a todo item
-* A User can modify an existing todo item
-* A User can filter the todo list (All | Active | Completed)
-* A User can share a list with another user
-
 ## Getting Started
 
-1. git clone react todo demo
+1. git clone task planner app
 
     ````bash
     git clone https://github.com/corneliuswill/task-planner-ui.git
@@ -67,7 +59,7 @@ src/
 3. Run
 
     ````bash
-    npm run start
+    npm run dev
     ````
 
 ## Running the Tests
