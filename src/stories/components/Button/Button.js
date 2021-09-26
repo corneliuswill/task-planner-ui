@@ -5,7 +5,7 @@ import './Button.css';
 
 function Button({children, ...rest}) {
     return (
-        <button className="button" {...rest}>
+        <button type="button" className="button" {...rest}>
             {children}
         </button>
     )

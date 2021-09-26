@@ -79,7 +79,7 @@ function createListState(state, action) {
 
     return {
         ...state,
-        allIds: [...state.allIds, ],
+        allIds: [...state.allIds, list.id],
         byId: {
             ...state.byId,
             [list.id]: {

@@ -22,6 +22,18 @@
     font-size: 14px;
 }
 
+.tp-sidebar-list  {
+    height: calc(100vh - 118px);
+    overflow-y: auto;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    /* -ms-overflow-style: none;  IE and Edge */
+    /* scrollbar-width: none;  Firefox     */
+}
+
+.tp-sidebar-list::-webkit-scrollbar {
+    /* display: none; */
+}
+
 .tp-sidebar-list.list-group  {
     margin-bottom: 8px;
 }

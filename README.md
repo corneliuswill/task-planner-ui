@@ -1,6 +1,6 @@
-# React Todo App Demo
+# Task Planner App Demo
 
-Todo App created in React.
+Task Planner Demo App created for training, and conveying best practices in frontend application development using the React UI Library.
 
 ## Technical Details
 
@@ -24,38 +24,30 @@ src/
     app/
     assets/
     common/
-    config/
+    configs/
     enhancers/
     features/
+    hooks/
     middleware/
     routes/
+    sagas/
+    store/
+    stories/
     index.js
     root-reducer
 ```
 
-# Features
-
-* A User can create an account
-* A User can login and view their todo lists
-* A User can create multiple todo lists
-* A User can add todo item to the list
-* A User can mark a todo item as complete
-* A User can delete a todo item
-* A User can modify an existing todo item
-* A User can filter the todo list (All | Active | Completed)
-* A User can share a list with another user
-
 ## Getting Started
 
-1. git clone react todo demo
+1. git clone task planner app
 
     ````bash
-    git clone https://github.com/corneliuswill/todo-app.git
+    git clone https://github.com/corneliuswill/task-planner-ui.git
     ````
     then
 
     ````bash
-    cd todo-app
+    cd task-planner-ui
     ````
 
 2. Install packages
@@ -67,7 +59,7 @@ src/
 3. Run
 
     ````bash
-    npm run start
+    npm run dev
     ````
 
 ## Running the Tests
@@ -77,5 +69,4 @@ src/
    ````
 
 
-## Mock Server
 

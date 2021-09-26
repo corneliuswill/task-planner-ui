@@ -1,9 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { withRouter } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import ThinkingEmoji from '../../assets/images/thinking-emoji.png'
-function NotFound(props) {
+import ThinkingEmoji from '../../assets/images/thinking-emoji.png';
+function NotFound() {
     return (
         <div className='container not-found'>
             <div>
@@ -21,7 +20,7 @@ function NotFound(props) {
                 <button
                     type="button"
                     className="btn btn-primary btn-lg btn-block active"
-                    onClick={() => props.history.push('/')}
+                    //onClick={() => props.history.push('/')}
                 >
                     Return to Home
                 </button>
@@ -34,4 +33,4 @@ NotFound.propTypes = {
     history: PropTypes.object
 }
 
-export default withRouter(NotFound)
+export default NotFound;

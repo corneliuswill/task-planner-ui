@@ -6,6 +6,7 @@ import { updateTaskList } from '../../../task/actions';
 import { LIST_TYPE } from '../../../../common/constants';
 
 import './sidebar.css';
+import { FlatButton } from '../../../../common/components';
 
 
 function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
@@ -62,9 +63,9 @@ function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
             </div>
             <div className="tp-bottom-bar">
                 {/* TODO: add functionality to add new list */}
-                <button className="button-unstyled new-list-button" onClick={onNewListCallback}>
+                <FlatButton className="new-list-button" onClick={onNewListCallback}>
                     <i className="bi bi-plus-lg"></i> New List
-                </button>
+                </FlatButton>
             </div>
         </nav>
     );

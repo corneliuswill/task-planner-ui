@@ -1,47 +1,31 @@
-/* eslint-disable */
 import React, { useEffect, useState } from 'react'
-
 import PropTypes from 'prop-types'
 import { useSelector, useDispatch } from 'react-redux'
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import { Login, SignUp, ResetPassword, Settings, NotFound } from '../../../routes';
-import { fakeAuth } from '../../../common/utils/auth-utils'
-import Main from '../main/main'
+import { Login, NotFound } from '../../../routes';
+import { Header, Main } from '../index';
 import { Sidebar } from '../../../features/sidebar';
 import { TasksPanel } from '../../../features/task';
 import { Avatar } from '../../../features/avatar';
-// import { setAuthedUserAction } from './actions/authed-user'
-// import { addTodoAction } from './actions/todos'
-// import { handleInitialData, getTodos } from '../actions/shared'
 import { SYSTEM_LISTS, UNITITLED_LIST } from '../../../common/constants'
-import Health from '../../../routes/health';
-import Dashboard from '../../../routes/dashboard';
-import Header from '../header/header';
 import { createListAction } from '../../../features/lists/actions';
+import { addToLocalStorageObjectArray } from '../../../common/utils/app-utils';
+import useToken from '../../../hooks/useToken';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import './app.css';
-import { addToLocalStorageObjectArray } from '../../../common/utils/app-utils';
 
 function App(props) {
   const lists = useSelector(state => state.lists);
   const tasks = useSelector(state => state.tasks);
   const notifications = useSelector(state => state.notifications);
-  const counter = useSelector(state => state.ui.sidebar.counter);
-
-  const [isLoggedIn, setIsLoggedIn] =  useState(false);
-  const dispatch = useDispatch();
+  // TODO: replace local state counter with counter from global state
+  //const counter = useSelector(state => state.ui.sidebar.counter);
   const [count, setCount] = useState(0);
-  let [user, setUser] = useState();
-  let [activeListId, setActiveListId] =  useState(1);
-
-  const handleLogIn = (userId) => {
-    fakeAuth.authenticate()
-    setIsLoggedIn(true)
-    props.setAuthedUser(userId)
-  }
+  const [activeListId, setActiveListId] =  useState(1);
+  const dispatch = useDispatch();
 
   const handleOnClick = (id, e) => {
     setActiveListId(id);
@@ -130,9 +114,16 @@ function App(props) {
 
   })
 
+  // TODO: if error show system error page
   // if (errors.hasError) {
   //   return <SystemError error={errors.errorList[0]}></SystemError>
   // }
+
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    return <Login setToken={setToken} />
+  }
 
   return (
     <>
@@ -144,7 +135,7 @@ function App(props) {
       <Router>
           {props.loading === true ? null :
           <Switch>
-            <PrivateRoute path='/' exact>
+            <Route path='/' exact>
               <Main
                 sidebar={
                   <Sidebar
@@ -161,21 +152,7 @@ function App(props) {
                   />
                 }
               />
-            </PrivateRoute>
-            <Route path='/health' exact>
-                <Health/>
             </Route>
-            <Route path='/dashboard' exact>
-                <Dashboard/>
-            </Route>
-            <Route path='/login' exact>
-              <Login handleLogIn={handleLogIn}/>
-            </Route>
-            <Route path='/reset' component={ResetPassword}/>
-            <Route path='/signup' component={SignUp}/>
-            <PrivateRoute path='/settings' exact>
-              <Settings/>
-            </PrivateRoute>
             <Route path='/*' component={NotFound} />
           </Switch>
           }
@@ -197,49 +174,5 @@ App.propTypes = {
   tasks: PropTypes.array
 }
 
-function PrivateRoute({ children, ...rest }) {
-  return (
-    <Route
-      {...rest}
-      render={({ location }) =>
-        fakeAuth.isAuthenticated ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: location }
-            }}
-          />
-        )
-      }
-    />
-  );
-}
+export default App;
 
-PrivateRoute.propTypes = {
-  children: PropTypes.object
-}
-
-// function mapStateToProps({ user, authedUser }) {
-//   const userId = authedUser
-
-//   return {
-//     loading: user === null,
-//     authedUser: userId,
-//     name: userId !== null ? user[userId].name : null,
-//     avatarURL: userId !== null ? user[userId].avatarURL : null
-//   }
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//       setAuthedUser: (userId) => dispatch(setAuthedUserAction(userId)),
-//       addTodo: (text) => dispatch(addTodoAction(text))
-//       getInitialData: (userId) => dispatch(handleInitialData(userId)),
-//       getTodos: (userId) => dispatch(getTodos(userId))
-//   }
-// }
-
-export default App
-/* eslint-enable */
