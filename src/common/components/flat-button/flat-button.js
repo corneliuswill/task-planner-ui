@@ -35,8 +35,15 @@ function FlatButton({ children, className, onClick }) {
 
 FlatButton.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.element,
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.element),
+        PropTypes.element.isRequired
+    ]),
     onClick: PropTypes.func,
+}
+
+FlatButton.defaultProps = {
+    className: null
 }
 
 export default FlatButton;
