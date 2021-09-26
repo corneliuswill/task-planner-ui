@@ -10,7 +10,7 @@ import { TasksPanel } from '../../../features/task';
 import { Avatar } from '../../../features/avatar';
 import { SYSTEM_LISTS, UNITITLED_LIST } from '../../../common/constants'
 import { createListAction } from '../../../features/lists/actions';
-import { addToLocalStorageObjectArray } from '../../../common/utils/app-utils';
+import { addToLocalStorageObjectArray } from '../../../utils/app-utils';
 import useToken from '../../../hooks/useToken';
 
 import 'bootstrap/dist/css/bootstrap.min.css'

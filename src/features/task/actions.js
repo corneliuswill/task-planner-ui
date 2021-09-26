@@ -1,5 +1,5 @@
-import { generateUID } from '../../common/utils/data-utils';
-import { getTasksUrl } from '../../common/utils/url-utils';
+import { generateUID } from '../../utils/data-utils';
+import { getTasksUrl } from '../../utils/url-utils';
 
 /* ACTION TYPES */
 // TODO: rename ACTION_TYPES to ACTIONS for consistency
@@ -35,6 +35,9 @@ export function getTasksAction (token = 'ABCDE')  {
 }
 
 export function addTaskAction (text, list) {
+    //let lists = [];
+    //lists = list ? lists.push(list) : [];
+
     return {
         type: ACTION_TYPES.ADD_TASK,
         task: {

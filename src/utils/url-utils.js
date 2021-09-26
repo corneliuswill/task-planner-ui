@@ -3,7 +3,7 @@ import {
     DOMAIN_TEST,
     API_VERSION,
     APP_NAME
-} from '../constants';
+} from '../common/constants';
 
 export function getListsUrl() {
     if (process.env.NODE_ENV === 'test') {

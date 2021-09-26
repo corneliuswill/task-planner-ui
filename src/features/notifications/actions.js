@@ -1,4 +1,4 @@
-import { getNotificationsUrl } from '../../common/utils/url-utils';
+import { getNotificationsUrl } from '../../utils/url-utils';
 
 export const ACTIONS = {
     GET_NOTIFICATIONS_REQUEST: 'GET_NOTIFICATIONS_REQUEST',

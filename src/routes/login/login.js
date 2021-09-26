@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 
-import { login } from '../../common/utils/auth-utils';
+import { login } from '../../utils/auth-utils';
 import './login.css';
 
 function Login({ setToken }) {

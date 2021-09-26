@@ -1,4 +1,4 @@
-import { getListsUrl, createListUrl, getUpdateListUrl } from '../../common/utils/url-utils';
+import { getListsUrl, createListUrl, getUpdateListUrl } from '../../utils/url-utils';
 import { HTTP_METHODS } from '../../common/constants';
 
 /* ACTION TYPES */

@@ -4,9 +4,18 @@ describe('actions', () => {
   it('should create an action to add a todo', () => {
     const text = 'Wash car';
     const expectedAction = {
-      type: actions.ACTION_TYPES.ADD_TASK,
-      text
+      type: 'ADD_TASK',
+      task: {
+        isComplete: false,
+        isImportant: false,
+        lists: [undefined],
+        text: "Wash car"
+      }
     }
-    expect(actions.addTaskAction(text)).toEqual(expectedAction)
+
+    const actual = actions.addTaskAction(text);
+    expectedAction.task.id = actual.task.id;
+    expectedAction.task.timestamp = actual.task.timestamp;
+    expect(actual).toEqual(expectedAction)
   })
 })
