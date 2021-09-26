@@ -47,6 +47,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:unit": "react-scripts test unit --env=jsdom",
+    "test:int": "react-scripts test int --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./src",
     "dev:old": "concurrently \"npm start\" \"node ../mock-server/server.js\"",
