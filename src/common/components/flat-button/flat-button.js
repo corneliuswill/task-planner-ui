@@ -25,19 +25,18 @@ const Button = styled.button`
     }
 `
 
-function FlatButton(props) {
-    let { onClick } = props;
-
+function FlatButton({ children, className, onClick }) {
     return (
-        <Button onClick={onClick}>
-            {props.children}
+        <Button type="button" className={className}  onClick={onClick}>
+            {children}
         </Button>
     );
 }
 
 FlatButton.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.element,
     onClick: PropTypes.func,
-    children: PropTypes.any
 }
 
 export default FlatButton;

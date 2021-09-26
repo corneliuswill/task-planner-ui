@@ -12,6 +12,7 @@ import { SYSTEM_LISTS } from '../../../../common/constants';
 import { updateListAction } from '../../../lists/actions';
 
 import './tasks-panel.css';
+import { FlatButton } from '../../../../common/components';
 
 const AddTodoInput = styled.input`
     display: block;
@@ -171,13 +172,13 @@ function TasksPanel({list, tasks}) {
                 <DateText className="date">{today}</DateText>
                 </>
                 }
-                <button type="button" className="unstyled-button options-button" onClick={onOptionsClick}>
+                <FlatButton className="options-button" onClick={onOptionsClick}>
                     <i className="bi bi-three-dots"></i>
-                </button>
+                </FlatButton>
                 <PopupMenu/>
             </div>
             <div className="task-panel-body">
-                {/* TODO: fix to show All Empty by list */}
+                {/* TODO: fix to show message if list is empty */}
                 { tasks.length > 0 ?
                 <List tasks={filteredTasks} onTaskClick={handleCompleteTask}/>
                 :
