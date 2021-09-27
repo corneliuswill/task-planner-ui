@@ -1,22 +1,22 @@
 import React from 'react';
-
+import { render } from "@testing-library/react";
 import { Provider } from 'react-redux'
-import { configure, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
 import configureStore from "redux-mock-store";
 
 import App from './app';
 
-const mockStore = configureStore();
-let initialState = {};
-let store = mockStore(initialState);
 
-configure({ adapter: new Adapter() });
+let store;
 
-describe('App component tests', function() {
+describe('<App/>', function() {
+  beforeEach(() => {
+    const mockStore = configureStore();
+    let initialState = {};
+    store = mockStore(initialState);
+  });
 
-  it('renders without crashing', () => {
-    shallow(
+  it('Renders App componnent correctly', () => {
+    render(
       <Provider store={store}>
         <App />
       </Provider>

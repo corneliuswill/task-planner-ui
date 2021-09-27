@@ -15,6 +15,7 @@ function Main({sidebar, tasksPanel}) {
                     </ErrorBoundary>
                 </div>
                 <div className="app-content-container col-md-8 col-lg-9">
+                    {/* Move loading bar to header component */}
                     <LoadingBar className="loading-bar"/>
                     <div className="app-main-inner">
                         <ErrorBoundary>
@@ -38,8 +39,8 @@ function Main({sidebar, tasksPanel}) {
 }
 
 Main.propTypes = {
-    sidebar: PropTypes.object,
-    tasksPanel: PropTypes.object,
+    sidebar: PropTypes.elementType,
+    tasksPanel: PropTypes.elementType,
     onClickCallback: PropTypes.func
 }
 
