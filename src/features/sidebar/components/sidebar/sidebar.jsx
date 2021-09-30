@@ -30,6 +30,7 @@ function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
     const renderListItem = (list, key) => {
         return (
             <button
+                aria-label={`${list.name} list with ${list.total_tasks} tasks`}
                 id={list.id}
                 onDrop={(e) => handleDrop(e)}
                 onDragOver={(e) => allowDrop(e)}
@@ -46,7 +47,7 @@ function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
     }
 
     return (
-        <nav className='tp-sidebar-container'>
+        <nav role="navigation" className="tp-sidebar-container">
             {/* TODO: add support for list icons */}
             <div className='tp-sidebar-list list-group'>
                 {

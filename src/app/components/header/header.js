@@ -27,18 +27,18 @@ function Header({ title, notifications, avatar }) {
     })
 
     return (
-        <div className="container-fluid no-gutter app-header-container">
+        <header role="banner" className="container-fluid no-gutter app-header-container">
             <div className="app-header">
                 <div id="nav-button" className="menu-button">
                     <i className="bi bi-list" style={{ fontSize: '2rem' }}></i>
                 </div>
-                <div id="logo">{title}</div>
+                <div id="logo"><h1>{title}</h1></div>
                 <div id="avatar">{avatar}</div>
             </div>
             <div className="supplemental">
                 <NotificationList notifications={notifications}/>
             </div>
-        </div>
+        </header>
     )
 }
 

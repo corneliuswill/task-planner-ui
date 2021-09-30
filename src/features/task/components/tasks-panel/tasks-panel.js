@@ -154,7 +154,7 @@ function TasksPanel({list, tasks}) {
     },[list, tasks, isEditable])
 
     return (
-        <div className="tasks-panel">
+        <main role="main" className="tasks-panel">
             <div className="task-panel-header">
                 { list &&
                 <>
@@ -172,7 +172,7 @@ function TasksPanel({list, tasks}) {
                 <DateText className="date">{today}</DateText>
                 </>
                 }
-                <FlatButton className="options-button" onClick={onOptionsClick}>
+                <FlatButton label="Options" className="options-button" onClick={onOptionsClick}>
                     <i className="bi bi-three-dots"></i>
                 </FlatButton>
                 <PopupMenu/>
@@ -187,13 +187,14 @@ function TasksPanel({list, tasks}) {
             </div>
             <InputContainer>
                 <AddTodoInput
+                    data-message="Text input to add a task"
                     value={text}
                     placeholder="&#43; Add a Task"
                     onChange={(e) => setText(e.target.value)}
                     onKeyPress={(e) => onAddTask(e)}
                 />
             </InputContainer>
-        </div>
+        </main>
     )
 }
 

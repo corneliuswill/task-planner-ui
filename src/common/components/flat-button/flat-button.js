@@ -25,9 +25,9 @@ const Button = styled.button`
     }
 `
 
-function FlatButton({ children, className, onClick }) {
+function FlatButton({ children, label, className, onClick }) {
     return (
-        <Button type="button" className={className}  onClick={onClick}>
+        <Button aria-label={label} type="button" className={className}  onClick={onClick}>
             {children}
         </Button>
     );
@@ -39,6 +39,7 @@ FlatButton.propTypes = {
         PropTypes.arrayOf(PropTypes.element),
         PropTypes.element.isRequired
     ]),
+    label: PropTypes.string.isRequired,
     onClick: PropTypes.func,
 }
 
