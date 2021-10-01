@@ -39,8 +39,8 @@ function Main({sidebar, tasksPanel}) {
 }
 
 Main.propTypes = {
-    sidebar: PropTypes.elementType,
-    tasksPanel: PropTypes.elementType,
+    sidebar: PropTypes.any,
+    tasksPanel: PropTypes.any,
     onClickCallback: PropTypes.func
 }
 

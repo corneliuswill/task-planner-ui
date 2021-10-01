@@ -64,8 +64,8 @@ function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
             </div>
             <div className="tp-bottom-bar">
                 {/* TODO: add functionality to add new list */}
-                <FlatButton className="new-list-button" onClick={onNewListCallback}>
-                    <i className="bi bi-plus-lg"></i> New List
+                <FlatButton className="new-list-button" label="Create New List" onClick={onNewListCallback}>
+                    <span><i className="bi bi-plus-lg"></i> New List</span>
                 </FlatButton>
             </div>
         </nav>

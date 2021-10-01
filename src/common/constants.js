@@ -26,6 +26,7 @@ export const LIST_TYPE = {
 
 export const DOMAIN_DEV = 'http://localhost:2300';
 export const DOMAIN_TEST = 'http://localhost:8080';
+export const DOMAIN_PROD = '';
 export const API_VERSION = '/v1';
 export const APP_NAME = '/task-planner';
 

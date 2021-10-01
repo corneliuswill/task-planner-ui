@@ -1,4 +1,4 @@
-{
+module.exports = {
     "id": "johndoe",
     "name": "John Doe",
     "email": "johndoe@dexample.com",

@@ -1,4 +1,6 @@
 .task {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -18,7 +20,7 @@
     width: 18px;
     height: 18px;
     align-self: center;
-    line-height: normal;
+    line-height: 12px;
 }
 
 .left-content-col {

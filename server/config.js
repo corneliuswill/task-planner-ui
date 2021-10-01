@@ -3,10 +3,10 @@ module.exports = {
     version: "/v1",
     basePath: "/task-planner",
     mocks: [
-        "../task-planner-ui/server/mocks"
+        "./mocks"
     ],
     routes: [
-        "../task-planner-ui/server/routes"
+        "./routes"
     ],
-    self: "../task-planner-ui/server/config.js"
+    self: "./config.js"
 }

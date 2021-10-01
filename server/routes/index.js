@@ -1,13 +1,9 @@
+const config = require('../config');
 const lists = require('../mocks/lists');
 const tasks = require('../mocks/tasks');
 const notifications = require('../mocks/notifications');
 
 module.exports = function(app) {
-    const config = {
-        version: '/v1',
-        basePath: '/task-planner'
-    }
-
     app.get('/', (req, res) => {
         const welcome = `
         <pre>
@@ -86,4 +82,14 @@ module.exports = function(app) {
     app.get(`${config.version}${config.basePath}/notifications/:id`, (req, res) => {
         res.json(notifications);
     });
+
+    app.get('/health', (req, res) => {
+        res.send('Health Check');
+    });
+
+    app.use('/login', (req, res) => {
+        res.send({
+            token: 'test123'
+        });
+    })
 }

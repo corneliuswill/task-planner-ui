@@ -5,7 +5,6 @@ const config = require('./config');
 function startServer(script, config, routes, callback) {
     let invoked = false;
 
-    //process = childprocess.fork(script, [JSON.stringify(config), JSON.stringify(routes)]);
     process = childprocess.fork(script, [config, routes]);
 
     process.on('error', function(error) {
@@ -22,7 +21,6 @@ function startServer(script, config, routes, callback) {
     });
 }
 
-// TODO: Switch to Mirage JS for API mocking
-startServer('../mock-server/server.js', config.self, config.routes, function(error){
+startServer('./server/server.js', /*config.self, config.routes,*/ function(error){
     console.log('callback', 'Callback called');
 });
