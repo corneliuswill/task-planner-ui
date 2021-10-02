@@ -39,7 +39,7 @@ const DateText = styled.p`
 const Title = styled.h2`
     color: #FFF;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 200;
     margin: 0;
 `
 
@@ -187,9 +187,10 @@ function TasksPanel({list, tasks}) {
             </div>
             <InputContainer>
                 <AddTodoInput
-                    data-message="Text input to add a task"
+                    label="Add task"
+                    name="add_task"
                     value={text}
-                    placeholder="&#43; Add a Task"
+                    placeholder="Add a Task"
                     onChange={(e) => setText(e.target.value)}
                     onKeyPress={(e) => onAddTask(e)}
                 />
