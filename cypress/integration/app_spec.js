@@ -1,6 +1,8 @@
+import axe from 'axe-core';
+
 describe('Task Planner Test', () => {
     beforeEach(() => {
-        
+
     })
 
     it('Successfully loads', () => {
@@ -45,14 +47,14 @@ describe('Task Planner Test', () => {
         cy.get('.task-text').contains('Clean the kitchen', { matchCase: true }).parent().parent().get('.delete-task-button:last').click();;
     })
 
-    // axe
-    // .run()
-    // .then(results => {
-    //     if (results.violations.length) {
-    //     throw new Error('Accessibility issues found');
-    //     }
-    // })
-    // .catch(err => {
-    //     console.error('Something bad happened:', err.message);
-    // });
+    axe
+    .run()
+    .then(results => {
+        if (results.violations.length) {
+        throw new Error('Accessibility issues found');
+        }
+    })
+    .catch(err => {
+        console.error('Something bad happened:', err.message);
+    });
 })
