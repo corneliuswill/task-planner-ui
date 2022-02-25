@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification/> component renders correctly 1`] = `
+<Fragment>
+  <styled.div
+    className="notification-container"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#CFE2FF",
+        "borderColor": "#D6D4FE",
+        "color": "#084298",
+      }
+    }
+  >
+    <span
+      className="font-700"
+    >
+      INFO:
+    </span>
+     
+    Hello World!
+    <p>
+      Hello World!
+    </p>
+  </styled.div>
+</Fragment>
+`;

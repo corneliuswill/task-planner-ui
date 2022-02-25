@@ -128,7 +128,8 @@ function App(props) {
   return (
     <>
       <Header
-          title='Task Planner'
+          //title='Task Planner'
+          title={process.env.REACT_APP_APP_NAME}
           notifications={Object.values(notifications.byId)}
           avatar={<Avatar size="medium"/>}
       />

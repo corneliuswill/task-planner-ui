@@ -4,13 +4,19 @@
     color: #FFF;
 }
 
-#logo {
+.logo-container {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
 }
 
-#avatar {
+h1.app-logo  {
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+}
+
+.avatar-container {
     position: absolute;
     top: 14px;
     right: 16px;
@@ -34,8 +40,23 @@
     line-height: 60px;
 }
 
-.app-header-container .supplemental {
+.app-header-container .notifications-container {
     display: none;
     flex-direction: column;
     width: 100%;
+}
+
+.menu-button i {
+    font-size: 2rem;;
+}
+
+@media (min-width: 768px) {
+    .logo-container {
+        text-align: left;
+        font-weight: 100;
+    }
+
+    #menu-button {
+        display: none;;
+    }
 }

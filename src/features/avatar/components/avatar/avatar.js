@@ -15,7 +15,7 @@ function Avatar ({ size, variant }) {
     });
 
     return (
-        <div className={`${styles[variant]} ${styles[size]}`} ref={avatar}>
+        <div className={`avatar ${styles[variant]} ${styles[size]}`} ref={avatar}>
 
         </div>
     );

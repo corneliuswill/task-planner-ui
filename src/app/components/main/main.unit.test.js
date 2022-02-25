@@ -15,7 +15,7 @@ describe("<Main/>", () => {
         store = mockStore(initialState);
     })
 
-    it("Renders Main component correctly", () => {
+    it("renders Main component correctly", () => {
         const onClick = jest.fn();
         render(<Provider store={store}><Main sidebar={Sidebar} tasksPanel={TasksPanel} onClickCallback={onClick}/></Provider>);
     });

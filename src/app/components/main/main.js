@@ -11,7 +11,7 @@ function Main({sidebar, tasksPanel}) {
             <div className="row">
                 <div id="sidebar" className="app-sidebar-container d-md-block col-md-4 col-lg-3 g-0">
                     <ErrorBoundary>
-                    {sidebar}
+                    <>{sidebar}</>
                     </ErrorBoundary>
                 </div>
                 <div className="app-content-container col-md-8 col-lg-9">
@@ -19,7 +19,7 @@ function Main({sidebar, tasksPanel}) {
                     <LoadingBar className="loading-bar"/>
                     <div className="app-main-inner">
                         <ErrorBoundary>
-                        {tasksPanel}
+                        <>{tasksPanel}</>
                         </ErrorBoundary>
                         <ContextMenu
                             opacity="0.90"

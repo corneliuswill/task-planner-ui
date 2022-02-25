@@ -19,23 +19,25 @@ function Header({ title, notifications, avatar }) {
     }
 
     useEffect(() => {
-        document.getElementById('nav-button').addEventListener('click', toggleSidebar);
+        document.getElementById('menu-button').addEventListener('click', toggleSidebar);
 
         return function cleanUpListener() {
-            document.getElementById('nav-button').removeEventListener('click', toggleSidebar);
+            if (document.getElementById('menu-button')) {
+                document.getElementById('menu-button').removeEventListener('click', toggleSidebar);
+            }
         }
     })
 
     return (
         <header role="banner" className="container-fluid no-gutter app-header-container">
             <div className="app-header">
-                <div id="nav-button" className="menu-button">
-                    <i className="bi bi-list" style={{ fontSize: '2rem' }}></i>
+                <div id="menu-button" className="menu-button">
+                    <i className="bi bi-list"></i>
                 </div>
-                <div id="logo"><h1>{title}</h1></div>
-                <div id="avatar">{avatar}</div>
+                <div className="logo-container"><h1 className="app-logo">{title}</h1></div>
+                <div className="avatar-container">{avatar}</div>
             </div>
-            <div className="supplemental">
+            <div className="notifications-container">
                 <NotificationList notifications={notifications}/>
             </div>
         </header>

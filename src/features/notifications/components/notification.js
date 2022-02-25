@@ -39,6 +39,7 @@ function Notification({ type, message }) {
                 }}
             >
                 <span className="font-700">{`${type}:`}</span> {message}
+                <p>Hello World!</p>
             </NotificationWrapper>
         }
         </>

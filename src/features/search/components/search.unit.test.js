@@ -1,11 +1,18 @@
+// import dependencies
 import React from 'react';
-import { render, screen, userEvent } from '@testing-library/react';
 
+// import react-testing methods
+import { render, screen } from '@testing-library/react';
+
+// add custom jest matchers from jest-dom
+import '@testing-library/jest-dom'
+
+// the component to test
 import Search from './search';
 
 describe(("<Search/>"), () => {
     it("Renders Search component correctly.", () => {
         render(<Search/>);
-        screen.getByRole('search', { name: /searchbox/i });
+        expect(screen.getByRole('search')).toBeInTheDocument();
     });
 });

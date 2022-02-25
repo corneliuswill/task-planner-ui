@@ -42,15 +42,6 @@ h6 {
         left: 0px;
         visibility: visible;
     }
-
-    #nav-button {
-        display: none;;
-    }
-
-    #logo {
-        text-align: left;
-        font-weight: 100;
-    }
 }
 
 .show-menu {
