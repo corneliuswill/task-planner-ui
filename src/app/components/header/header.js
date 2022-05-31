@@ -5,7 +5,7 @@ import { NotificationList } from '../../../features/notifications';
 
 import './header.css';
 
-function Header({ title, notifications, avatar }) {
+function Header({ title, notifications, avatar, isNotificationsVisible }) {
     let [isVisible, setVisible] = useState(false);
 
     const toggleSidebar = () => {
@@ -37,17 +37,24 @@ function Header({ title, notifications, avatar }) {
                 <div className="logo-container"><h1 className="app-logo">{title}</h1></div>
                 <div className="avatar-container">{avatar}</div>
             </div>
+            {isNotificationsVisible &&
             <div className="notifications-container">
                 <NotificationList notifications={notifications}/>
             </div>
+            }
         </header>
     )
 }
 
 Header.propTypes = {
-    title: PropTypes.string,
+    avatar: PropTypes.object,
+    isNotificationsVisible: PropTypes.bool,
     notifications: PropTypes.array,
-    avatar: PropTypes.object
+    title: PropTypes.string,
+}
+
+Header.defaultProps = {
+    isNotificationsVisible: true
 }
 
 export default Header;

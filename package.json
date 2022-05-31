@@ -53,8 +53,7 @@
     "test:updateSnapshots": "react-scripts test --updateSnapshot",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./src",
-    "dev:old": "concurrently \"npm start\" \"node ../mock-server/server.js\"",
-    "dev": "concurrently \"npm start\" \"node server/main.js\"",
+    "dev": "concurrently \"npm start\"",
     "cypress:open": "cypress open",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"

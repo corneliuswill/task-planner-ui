@@ -4,7 +4,7 @@ import LoadingBar from 'react-redux-loading-bar';
 
 import { ContextMenu, MenuItem, MenuSeperator } from '../../../features/menus';
 import { ErrorBoundary } from '../../../features/errors';
-
+import { Modal } from '../../../features/modal';
 function Main({sidebar, tasksPanel}) {
     return (
         <div className="app-container container-fluid no-gutters">
@@ -34,6 +34,7 @@ function Main({sidebar, tasksPanel}) {
                     </div>
                 </div>
             </div>
+            <Modal></Modal>
         </div>
     );
 }

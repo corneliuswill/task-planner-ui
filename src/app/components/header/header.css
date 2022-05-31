@@ -41,7 +41,6 @@ h1.app-logo  {
 }
 
 .app-header-container .notifications-container {
-    display: none;
     flex-direction: column;
     width: 100%;
 }
