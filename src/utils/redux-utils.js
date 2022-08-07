@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import reducer from '../root-reducer';
 
 export function createTestStore() {

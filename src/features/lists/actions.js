@@ -82,3 +82,47 @@ export function setListsAction(lists) {
         lists
     }
 }
+
+export const getLists = () => async dispatch => {
+    dispatch({
+        type: ACTIONS.GET_LISTS__REQUEST
+    });
+
+    try {
+        const listResponse = await fetch(getListsUrl());
+
+        const lists = await listResponse.json();
+        dispatch({
+            type: ACTIONS.GET_LISTS__SUCCESS,
+            payload: lists
+        });
+    } catch(exc) {
+        dispatch({
+            type: ACTIONS.GET_LISTS__FAILURE,
+            payload: exc
+        });
+    }
+}
+
+// export function getLists() {
+//     return async dispatch => {
+//         dispatch({
+//             type: ACTIONS.GET_LISTS__REQUEST
+//         });
+
+//         try {
+//             const listResponse = await fetch(getListsUrl());
+
+//             const lists = await listResponse.json();
+//             dispatch({
+//                 type: ACTIONS.GET_LISTS__SUCCESS,
+//                 payload: lists
+//             });
+//         } catch(exc) {
+//             dispatch({
+//                 type: ACTIONS.GET_LISTS__FAILURE,
+//                 payload: exc
+//             });
+//         }
+//     }
+// }

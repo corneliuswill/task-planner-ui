@@ -37,4 +37,4 @@ export function loadInitialData() {
         console.log('lists', getState().lists);
       });
     }
-  }
+}
