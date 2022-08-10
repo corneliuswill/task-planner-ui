@@ -44,3 +44,10 @@ export function getUpdateListUrl() {
 
     return DOMAIN_DEV + API_VERSION + APP_NAME + '/lists';
 }
+
+export function getDefaultHeaders() {
+    return {
+        'Content-Type': 'application/json',
+        'Timeout': 1000
+    }
+}
