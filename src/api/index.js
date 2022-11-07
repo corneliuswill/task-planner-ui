@@ -1,5 +1,5 @@
-import lists from './data/lists';
-import tasks from './data/tasks';
+import lists from './mocks/lists';
+import tasks from './mocks/tasks';
 import * as API from './utils/api-utils';
 
 export {

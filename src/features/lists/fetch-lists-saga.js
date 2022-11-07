@@ -1,8 +1,8 @@
 import { takeLatest, put } from 'redux-saga/effects';
 
-import { getListsUrl } from '../utils/url-utils';
-import { getOptions } from '../utils/api-utils';
-import { ACTIONS } from '../features/lists/actions';
+import { getListsUrl } from '../../utils/url-utils';
+import { getOptions } from '../../utils/api-utils';
+import { ACTIONS } from './actions';
 
 function* fetchListsSaga() {
     try {

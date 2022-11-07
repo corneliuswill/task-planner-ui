@@ -54,3 +54,19 @@ export async function asyncRequest(config, handlers = { onSuccess: () => {}, onF
 
     return response;
 }
+
+/*
+Usage example: 
+
+import { asyncRequest } from './features/axios-factory';
+
+asyncRequest({
+    method: 'get',
+    url: url
+}, {
+    onSuccess: () => { console.log('Success') },
+    onFailure: () => { console.log('Failure') },
+    catchAll: () => { console.log('Catch All') }
+}
+).then(res => console.log('Axios Response', res));
+*/

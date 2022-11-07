@@ -105,7 +105,7 @@ function updateListState(state, action) {
 
 function setList(state, action) {
     let allIds = action.lists.map(list => list.id);
-    
+
     return {
         ...state,
         allIds: [...state.allIds, allIds],

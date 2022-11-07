@@ -11,7 +11,7 @@ import { Avatar } from '../../../features/avatar';
 import { SYSTEM_LISTS, UNITITLED_LIST } from '../../../common/constants'
 import { createListAction } from '../../../features/lists/actions';
 import { addToLocalStorageObjectArray } from '../../../utils/app-utils';
-import useToken from '../../../hooks/useToken';
+import useToken from '../../../hooks/use-token';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'

@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export function getOptions(token) {
     return {
         method: 'GET',
@@ -7,4 +9,17 @@ export function getOptions(token) {
             'Authorization': `Bearer ${token}`
         }
     };
+}
+
+export function fetchRequest(url, config) {
+    return fetch(
+        url,
+        config || getOptions()
+    );
+}
+
+export function axiosRequest(config) {
+    return axios({
+        ...config
+    })
 }

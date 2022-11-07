@@ -2,8 +2,8 @@ import { generateUID } from '../../utils/data-utils';
 import { getTasksUrl } from '../../utils/url-utils';
 
 /* ACTION TYPES */
-// TODO: rename ACTION_TYPES to ACTIONS for consistency
-export const ACTION_TYPES = {
+// TODO: rename ACTIONS to ACTIONS for consistency
+export const ACTIONS = {
     GET_TASKS__REQUEST: 'GET_TASKS__REQUEST',
     GET_TASKS__SUCCESS: 'GET_TASKS__SUCCESS',
     GET_TASKS__FAILURE: 'GET_TASKS__FAILURE',
@@ -18,9 +18,9 @@ export const ACTION_TYPES = {
 export function getTasksAction (token = 'ABCDE')  {
     return {
         types: [
-            ACTION_TYPES.GET_TASKS__REQUEST,
-            ACTION_TYPES.GET_TASKS__SUCCESS,
-            ACTION_TYPES.GET_TASKS__FAILURE
+            ACTIONS.GET_TASKS__REQUEST,
+            ACTIONS.GET_TASKS__SUCCESS,
+            ACTIONS.GET_TASKS__FAILURE
         ],
         promise: {
             url: getTasksUrl(),
@@ -39,7 +39,7 @@ export function addTaskAction (text, list) {
     //lists = list ? lists.push(list) : [];
 
     return {
-        type: ACTION_TYPES.ADD_TASK,
+        type: ACTIONS.ADD_TASK,
         task: {
             id: generateUID(),
             text,
@@ -53,28 +53,28 @@ export function addTaskAction (text, list) {
 
 export function deleteTaskAction (id) {
     return {
-        type: ACTION_TYPES.DELETE_TASK,
+        type: ACTIONS.DELETE_TASK,
         id,
     }
 }
 
 export function toggleCompleteTaskAction (id) {
     return {
-        type: ACTION_TYPES.TOGGLE_COMPLETE_TASK,
+        type: ACTIONS.TOGGLE_COMPLETE_TASK,
         id,
     }
 }
 
 export function toggleImportantTaskAction (id) {
     return {
-        type: ACTION_TYPES.TOGGLE_IMPORTANT_TASK,
+        type: ACTIONS.TOGGLE_IMPORTANT_TASK,
         id,
     }
 }
 
 export function updateTaskList (taskId, listId) {
     return {
-        type: ACTION_TYPES.UPDATE_TASK_LIST,
+        type: ACTIONS.UPDATE_TASK_LIST,
         taskId,
         listId
     }

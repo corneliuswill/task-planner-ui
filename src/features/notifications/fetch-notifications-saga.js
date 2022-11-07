@@ -1,8 +1,8 @@
 import { takeLatest, put } from 'redux-saga/effects';
 
-import { getNotificationsUrl } from '../utils/url-utils';
-import { getOptions } from '../utils/api-utils';
-import { ACTIONS } from '../features/notifications/actions';
+import { getNotificationsUrl } from '../../utils/url-utils';
+import { getOptions } from '../../utils/api-utils';
+import { ACTIONS } from './actions';
 
 function* fetchNotificationsSaga() {
     try {

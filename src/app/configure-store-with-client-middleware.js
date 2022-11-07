@@ -1,12 +1,11 @@
-import { createStore, applyMiddleware, compose,  } from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import { createStore, applyMiddleware, compose } from 'redux';
+import clientMiddleware from '../middleware/client-middleware';
 import logger from 'redux-logger';
 
-import clientMiddleware from '../middleware/client-middleware';
-import rootReducer from './reducers';
+import rootReducer from '../root-reducer';
 
 export default function configureStore() {
-    const middlewares = [thunkMiddleware, clientMiddleware, logger];
+    const middlewares = [clientMiddleware, logger];
 
     const composeEnhancers =
     (typeof window !== 'undefined' &&
@@ -20,7 +19,7 @@ export default function configureStore() {
     const store = createStore(rootReducer, enhancer);
 
     if (process.env.NODE_ENV !== 'production' && module.hot) {
-        module.hot.accept(['./reducers'], () => store.replaceReducer(rootReducer))
+        module.hot.accept(['../root-reducer'], () => store.replaceReducer(rootReducer))
     }
 
     return store;

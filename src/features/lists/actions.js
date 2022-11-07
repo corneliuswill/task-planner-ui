@@ -6,7 +6,7 @@ export const ACTIONS = {
     GET_LISTS__REQUEST: 'GET_LISTS__REQUEST',
     GET_LISTS__SUCCESS: 'GET_LISTS__SUCCESS',
     GET_LISTS__FAILURE: 'GET_LISTS__FAILURE',
-    SET_LISTS: 'SET_LISTS__REQUEST',
+    SET_LISTS: 'SET_LISTS',
     CREATE_LIST__REQUEST: 'CREATE_LIST__REQUEST',
     CREATE_LIST__SUCCESS: 'CREATE_LIST__SUCCESS',
     CREATE_LIST__FAILURE: 'CREATE_LIST__FAILURE',
@@ -83,46 +83,3 @@ export function setListsAction(lists) {
     }
 }
 
-export const getLists = () => async dispatch => {
-    dispatch({
-        type: ACTIONS.GET_LISTS__REQUEST
-    });
-
-    try {
-        const listResponse = await fetch(getListsUrl());
-
-        const lists = await listResponse.json();
-        dispatch({
-            type: ACTIONS.GET_LISTS__SUCCESS,
-            payload: lists
-        });
-    } catch(exc) {
-        dispatch({
-            type: ACTIONS.GET_LISTS__FAILURE,
-            payload: exc
-        });
-    }
-}
-
-// export function getLists() {
-//     return async dispatch => {
-//         dispatch({
-//             type: ACTIONS.GET_LISTS__REQUEST
-//         });
-
-//         try {
-//             const listResponse = await fetch(getListsUrl());
-
-//             const lists = await listResponse.json();
-//             dispatch({
-//                 type: ACTIONS.GET_LISTS__SUCCESS,
-//                 payload: lists
-//             });
-//         } catch(exc) {
-//             dispatch({
-//                 type: ACTIONS.GET_LISTS__FAILURE,
-//                 payload: exc
-//             });
-//         }
-//     }
-// }
