@@ -1,4 +1,4 @@
-import { fakeAuth, login } from './auth-utils';
+import { fakeAuth, login } from '../auth-utils';
 
 describe('auth utils', () => {
     describe('fakeAuth', () => {

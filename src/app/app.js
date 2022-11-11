@@ -8,7 +8,7 @@ import { Header, Main } from './index';
 import { Sidebar } from '../features/sidebar';
 import { TasksPanel } from '../features/task';
 import { Avatar } from '../features/avatar';
-import { SYSTEM_LISTS, UNITITLED_LIST } from '../common/constants'
+import { SYSTEM_LISTS, UNITITLED_LIST } from '../constants'
 import { createListAction } from '../features/lists/actions';
 import { addToLocalStorageObjectArray } from '../utils/app-utils';
 import useToken from '../hooks/use-token';
@@ -162,6 +162,7 @@ function App(props) {
   )
 }
 
+// TODO: update propTypes
 App.propTypes = {
   authedUser: PropTypes.string,
   avatarURL: PropTypes.string,

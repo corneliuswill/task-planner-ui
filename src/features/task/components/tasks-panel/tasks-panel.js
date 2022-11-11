@@ -8,11 +8,11 @@ import styled from 'styled-components';
 import { List } from '../../../lists';
 import { PopupMenu } from '../../../menus'
 import { addTaskAction, toggleCompleteTaskAction } from '../../actions'
-import { SYSTEM_LISTS } from '../../../../common/constants';
+import { SYSTEM_LISTS } from '../../../../constants';
 import { updateListAction } from '../../../lists/actions';
 
 import './tasks-panel.css';
-import { FlatButton } from '../../../../common/components';
+import { FlatButton } from '../../../../components';
 
 const AddTodoInput = styled.input`
     display: block;

@@ -1,4 +1,4 @@
-import { COUNTER } from "../common/constants";
+import { COUNTER } from "../constants";
 
 import { ACTIONS } from "./actions";
 

@@ -1,5 +1,5 @@
 import { ACTIONS } from './actions';
-import { SYSTEM_LISTS } from '../../common/constants';
+import { SYSTEM_LISTS } from '../../constants';
 
 const INITIAL_STATE = {
     allIds: [],

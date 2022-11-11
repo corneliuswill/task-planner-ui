@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { updateTaskList } from '../../../task/actions';
-import { LIST_TYPE } from '../../../../common/constants';
+import { LIST_TYPE } from '../../../../constants';
 
 import './sidebar.css';
-import { FlatButton } from '../../../../common/components';
+import { FlatButton } from '../../../../components';
 
 
 function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {

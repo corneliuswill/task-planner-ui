@@ -1,5 +1,5 @@
 import { getListsUrl, createListUrl, getUpdateListUrl } from '../../utils/url-utils';
-import { HTTP_METHODS } from '../../common/constants';
+import { HTTP_METHODS } from '../../constants';
 
 /* ACTION TYPES */
 export const ACTIONS = {

@@ -1,3 +1,4 @@
+// TODO: move constant near related files
 export const SYSTEM_LISTS = {
     COMPLETED: {
         id: 1000,
