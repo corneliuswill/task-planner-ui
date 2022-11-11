@@ -1,6 +1,6 @@
-import App from './components/app/app';
-import Header from './components/header/header';
-import Main from './components/main/main';
+import App from './app';
+import Header from './header';
+import Main from './main';
 import appReducer from './reducer';
 import * as actions from './actions';
 

@@ -3,15 +3,15 @@ import PropTypes from 'prop-types'
 import { useSelector, useDispatch } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import { Login, NotFound } from '../../../routes';
-import { Header, Main } from '../index';
-import { Sidebar } from '../../../features/sidebar';
-import { TasksPanel } from '../../../features/task';
-import { Avatar } from '../../../features/avatar';
-import { SYSTEM_LISTS, UNITITLED_LIST } from '../../../common/constants'
-import { createListAction } from '../../../features/lists/actions';
-import { addToLocalStorageObjectArray } from '../../../utils/app-utils';
-import useToken from '../../../hooks/use-token';
+import { Login, NotFound } from '../routes';
+import { Header, Main } from './index';
+import { Sidebar } from '../features/sidebar';
+import { TasksPanel } from '../features/task';
+import { Avatar } from '../features/avatar';
+import { SYSTEM_LISTS, UNITITLED_LIST } from '../common/constants'
+import { createListAction } from '../features/lists/actions';
+import { addToLocalStorageObjectArray } from '../utils/app-utils';
+import useToken from '../hooks/use-token';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'

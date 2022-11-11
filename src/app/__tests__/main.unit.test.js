@@ -1,10 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Provider } from 'react-redux';
 import configureStore from "redux-mock-store";
 
-import Main from './main';
-import { Sidebar } from '../../../features/sidebar';
-import { TasksPanel } from '../../../features/task'
+import Main from '../main';
+import { Sidebar } from '../../features/sidebar';
+import { TasksPanel } from '../../features/task'
 
 let store;
 let initialState = { loadingBar: {} };

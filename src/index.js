@@ -4,7 +4,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 
 import { App } from './app';
-import configureStore from './app/configure-store-with-thunk';
+import { configureStore } from './store';
 import { ErrorBoundary }  from './features/errors';
 import { getLists } from './features/lists/get-lists-thunk';
 import { getListsUrl, getNotificationsUrl, getTasksUrl } from './utils/url-utils';

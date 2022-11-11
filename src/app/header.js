@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { NotificationList } from '../../../features/notifications';
+import { NotificationList } from '../features/notifications';
 
 import './header.css';
 
