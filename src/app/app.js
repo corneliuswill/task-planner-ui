@@ -12,15 +12,17 @@ import { SYSTEM_LISTS, UNITITLED_LIST } from '../constants'
 import { createListAction } from '../features/lists/actions';
 import { addToLocalStorageObjectArray } from '../utils/app-utils';
 import useToken from '../hooks/use-token';
+import { SystemError } from '../features/errors';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import './app.css';
-
+import { selectErrors } from '../selectors';
 function App(props) {
   const lists = useSelector(state => state.lists);
   const tasks = useSelector(state => state.tasks);
   const notifications = useSelector(state => state.notifications);
+  const errors = useSelector(state => selectErrors(state));
   // TODO: replace local state counter with counter from global state
   //const counter = useSelector(state => state.ui.sidebar.counter);
   const [count, setCount] = useState(0);
@@ -115,9 +117,9 @@ function App(props) {
   })
 
   // TODO: if error show system error page
-  // if (errors.hasError) {
-  //   return <SystemError error={errors.errorList[0]}></SystemError>
-  // }
+  if (errors.hasError) {
+    return <SystemError type={`General Error`} message={`An error has occurred`}></SystemError>
+  }
 
   const { token, setToken } = useToken();
 
@@ -133,7 +135,8 @@ function App(props) {
           notifications={Object.values(notifications.byId)}
           avatar={<Avatar size="medium"/>}
       />
-      <Router>
+      {/* TODO: mover BrowserRouter to index */}
+      <Router basename='/task-planner'>
           {props.loading === true ? null :
           <Switch>
             <Route path='/' exact>

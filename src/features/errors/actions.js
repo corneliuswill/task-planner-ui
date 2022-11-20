@@ -3,7 +3,14 @@ export const ACTIONS = {
     CLEAR_ERRORS: 'CLEAR_ERRORS'
 }
 
-export const setError = (type, error, level) => {
+export const ERROR_LEVEL = {
+    INFO: 'info',
+    WARNING: 'warning',
+    ERROR: 'error',
+    CRITICAL: 'critical'
+}
+
+export const setError = (type, error, level = ERROR_LEVEL.ERROR) => {
     return {
         type: ACTIONS.SET_ERROR,
         hasError: true,
