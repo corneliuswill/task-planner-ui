@@ -11,7 +11,11 @@ let store;
 describe('<App/>', function() {
   beforeEach(() => {
     const mockStore = configureStore();
-    let initialState = {};
+    let initialState = {
+      errors: {
+        hasError: false
+      }
+    };
     store = mockStore(initialState);
   });
 
@@ -24,4 +28,3 @@ describe('<App/>', function() {
   });
 
 });
-

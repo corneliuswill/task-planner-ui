@@ -17,18 +17,23 @@ import { SystemError } from '../features/errors';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import './app.css';
-import { selectErrors } from '../selectors';
+import { selectErrors, selectTasks } from '../selectors';
 function App(props) {
   const lists = useSelector(state => state.lists);
-  const tasks = useSelector(state => state.tasks);
+  //const tasks = useSelector(state => state.tasks);
+  const tasks = useSelector(state => selectTasks(state));
   const notifications = useSelector(state => state.notifications);
   const errors = useSelector(state => selectErrors(state));
   // TODO: replace local state counter with counter from global state
   //const counter = useSelector(state => state.ui.sidebar.counter);
   const [count, setCount] = useState(0);
+  //const [filter, setFilter] = useState(null);
   const [activeListId, setActiveListId] =  useState(1);
   const dispatch = useDispatch();
 
+  //const selectResult = useSelector(state => selectTaskById(state, 'fgwr7ihtkgo3tw4rgigjuz'));
+  //console.log('selectResult', selectResult);
+  
   const handleOnClick = (id, e) => {
     setActiveListId(id);
     e.preventDefault();

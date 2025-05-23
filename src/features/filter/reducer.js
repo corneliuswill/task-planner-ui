@@ -1,11 +1,7 @@
 import { SET_VISIBILITY_FILTER, VISIBILITY_FILTER } from './actions'
 
 const INITIAL_STATE = {
-  visibility: VISIBILITY_FILTER.SHOW_ALL,
-  colors: [],
-  lists: {
-    showCompleted: true
-}
+  visibility: VISIBILITY_FILTER.SHOW_ALL
 }
 
 export default function filterReducer(state = INITIAL_STATE, action) {

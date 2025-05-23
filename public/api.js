@@ -56,6 +56,7 @@
     }
 
     API.todos = (request = { method : 'get' }) => {
+        let response;
         return new Promise((resolve, reject) => {
             try {
                 setTimeout(() => {
@@ -68,8 +69,8 @@
                                 }
                             }
 
-                            resolve({...response})
-                            break
+                            resolve({...response});
+                            return;
                         case 'post':
                             response = {
                                 status: 200,
@@ -77,31 +78,36 @@
                                     ...todos,
                                     [request.body.id]: request.body
                                 }
-                            }
-                            resolve(response)
-                            break
+                            };
+                            resolve(response);
+                            return; 
                         default:
-                            resolve({ status: 400, message: 'Bad Request' })
+                            resolve({ status: 400, message: 'Bad Request' });
                     }
                 }, 1000)
             } catch(error) {
-                reject(`Error getting todos: ${error}`)
+                reject(`Error getting todos: ${error}`);
             }
         })
     }
 
-    API.user = (request) => {
+    API.users = (request) => {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                switch(request.method) {
-                    case 'get':
-
-                    case 'put':
-
-                    default:
-                        resolve({ satus: 400, message: 'Bad Request '})
-                }
-            }, 1000)
+            try {
+                setTimeout(() => {
+                    switch(request.method) {
+                        case 'get':
+                            resolve(users);
+                            return;
+                        case 'post':
+                            return;
+                        default:
+                            resolve({ satus: 400, message: 'Bad Request'})
+                    }
+                }, 1000);
+            } catch(error) {
+                reject('Error calling users');
+            }
         })
     }
 }())
