@@ -1,5 +1,5 @@
-import { ACTION_TYPES } from './actions';
-import { SYSTEM_LISTS } from '../../common/constants';
+import { ACTIONS } from './actions';
+import { SYSTEM_LISTS } from '../../constants';
 
 const INITIAL_STATE = {
     allIds: [],
@@ -10,28 +10,28 @@ const INITIAL_STATE = {
 
 export default function tasks (state = INITIAL_STATE, action) {
     switch(action.type) {
-        case ACTION_TYPES.GET_TASKS__REQUEST:
+        case ACTIONS.GET_TASKS__REQUEST:
             return {
                 ...state, 
                 isLoading: true
             }
-        case ACTION_TYPES.GET_TASKS__SUCCESS:
+        case ACTIONS.GET_TASKS__SUCCESS:
             return getTasksOnSuccess(state, action);
-        case ACTION_TYPES.GET_TASKS__FAILURE:
+        case ACTIONS.GET_TASKS__FAILURE:
             return {
                 ...state,
                 isLoading: false,
                 hasError: true
             }
-        case ACTION_TYPES.ADD_TASK:
+        case ACTIONS.ADD_TASK:
             return addTask(state, action); //state.concat([action.task])
-        case ACTION_TYPES.DELETE_TASK:
+        case ACTIONS.DELETE_TASK:
             return deleteTask(state, action); //state.filter((task) => task.id !== action.id)
-        case ACTION_TYPES.TOGGLE_COMPLETE_TASK:
+        case ACTIONS.TOGGLE_COMPLETE_TASK:
             return toggleComplete(state, action)
-        case ACTION_TYPES.TOGGLE_IMPORTANT_TASK:
+        case ACTIONS.TOGGLE_IMPORTANT_TASK:
             return toggleImportant(state, action)
-        case ACTION_TYPES.UPDATE_TASK_LIST:
+        case ACTIONS.UPDATE_TASK_LIST:
             return updateTaskList(state, action)
         default:
             return state

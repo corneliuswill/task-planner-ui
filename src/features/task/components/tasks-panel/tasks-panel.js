@@ -8,11 +8,11 @@ import styled from 'styled-components';
 import { List } from '../../../lists';
 import { PopupMenu } from '../../../menus'
 import { addTaskAction, toggleCompleteTaskAction } from '../../actions'
-import { SYSTEM_LISTS } from '../../../../common/constants';
+import { SYSTEM_LISTS } from '../../../../constants';
 import { updateListAction } from '../../../lists/actions';
 
 import './tasks-panel.css';
-import { FlatButton } from '../../../../common/components';
+import { FlatButton } from '../../../../components';
 
 const AddTodoInput = styled.input`
     display: block;
@@ -39,7 +39,7 @@ const DateText = styled.p`
 const Title = styled.h2`
     color: #FFF;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 200;
     margin: 0;
 `
 
@@ -154,7 +154,7 @@ function TasksPanel({list, tasks}) {
     },[list, tasks, isEditable])
 
     return (
-        <div className="tasks-panel">
+        <main role="main" className="tasks-panel">
             <div className="task-panel-header">
                 { list &&
                 <>
@@ -172,7 +172,7 @@ function TasksPanel({list, tasks}) {
                 <DateText className="date">{today}</DateText>
                 </>
                 }
-                <FlatButton className="options-button" onClick={onOptionsClick}>
+                <FlatButton label="Options" className="options-button" onClick={onOptionsClick}>
                     <i className="bi bi-three-dots"></i>
                 </FlatButton>
                 <PopupMenu/>
@@ -187,13 +187,15 @@ function TasksPanel({list, tasks}) {
             </div>
             <InputContainer>
                 <AddTodoInput
+                    label="Add task"
+                    name="add_task"
                     value={text}
-                    placeholder="&#43; Add a Task"
+                    placeholder="Add a Task"
                     onChange={(e) => setText(e.target.value)}
                     onKeyPress={(e) => onAddTask(e)}
                 />
             </InputContainer>
-        </div>
+        </main>
     )
 }
 

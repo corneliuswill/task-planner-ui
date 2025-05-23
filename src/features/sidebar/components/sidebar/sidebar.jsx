@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { updateTaskList } from '../../../task/actions';
-import { LIST_TYPE } from '../../../../common/constants';
+import { LIST_TYPE } from '../../../../constants';
 
 import './sidebar.css';
-import { FlatButton } from '../../../../common/components';
+import { FlatButton } from '../../../../components';
 
 
 function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
@@ -30,6 +30,7 @@ function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
     const renderListItem = (list, key) => {
         return (
             <button
+                aria-label={`${list.name} list with ${list.total_tasks} tasks`}
                 id={list.id}
                 onDrop={(e) => handleDrop(e)}
                 onDragOver={(e) => allowDrop(e)}
@@ -46,7 +47,7 @@ function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
     }
 
     return (
-        <nav className='tp-sidebar-container'>
+        <nav role="navigation" className="tp-sidebar-container">
             {/* TODO: add support for list icons */}
             <div className='tp-sidebar-list list-group'>
                 {
@@ -63,8 +64,8 @@ function Sidebar({activeList, menuItems, onClickCallback, onNewListCallback}) {
             </div>
             <div className="tp-bottom-bar">
                 {/* TODO: add functionality to add new list */}
-                <FlatButton className="new-list-button" onClick={onNewListCallback}>
-                    <i className="bi bi-plus-lg"></i> New List
+                <FlatButton className="new-list-button" label="Create New List" onClick={onNewListCallback}>
+                    <span><i className="bi bi-plus-lg"></i> New List</span>
                 </FlatButton>
             </div>
         </nav>

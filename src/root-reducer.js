@@ -7,7 +7,7 @@ import { user } from './features/user'
 import { tasks } from './features/task'
 import { lists } from './features/lists'
 import { filterReducer as filter } from './features/filter'
-import { uiReducer as ui } from './app';
+import { appReducer as app } from './app';
 import { notifications } from './features/notifications'
 
 export default combineReducers({
@@ -18,6 +18,6 @@ export default combineReducers({
     loadingBar: loadingBarReducer,
     notifications,
     tasks,
-    ui,
+    app,
     user,
 })

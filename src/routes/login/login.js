@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 
-import { login } from '../../common/utils/auth-utils';
+import { login } from '../../utils/auth-utils';
 import './login.css';
 
 function Login({ setToken }) {
@@ -24,13 +24,13 @@ function Login({ setToken }) {
         <div>
           <label>
             <p>Username</p>
-            <input type="text" onChange={(e) => setUserName(e.target.value)}/>
+            <input name="username" type="text" onChange={(e) => setUserName(e.target.value)}/>
           </label>
         </div>
         <div>
           <label>
             <p>Password</p>
-            <input type="password" onChange={(e) => setPassword(e.target.value)}/>
+            <input name="password" type="password" onChange={(e) => setPassword(e.target.value)}/>
           </label>
         </div>
         <div>

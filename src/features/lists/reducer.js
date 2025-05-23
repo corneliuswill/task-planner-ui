@@ -1,4 +1,4 @@
-import { SYSTEM_LISTS } from '../../common/constants';
+import { SYSTEM_LISTS } from '../../constants';
 import { ACTIONS } from './actions';
 
 const INITIAL_STATE = {
@@ -105,7 +105,7 @@ function updateListState(state, action) {
 
 function setList(state, action) {
     let allIds = action.lists.map(list => list.id);
-    
+
     return {
         ...state,
         allIds: [...state.allIds, allIds],

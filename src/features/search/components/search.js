@@ -8,8 +8,10 @@ const SearchInput = styled.input `
 
 function Search() {
     return (
-        <div>
-            <Search placeholder="Search"></Search>
-        </div>
-    )
+        <form id="search-form" role="search" className="search-form">
+            <SearchInput id="search-input" className="search-input" name="search" placeholder="Search" type="search"/>
+        </form>
+    );
 }
+
+export default Search;

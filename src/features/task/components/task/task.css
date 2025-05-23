@@ -1,0 +1,33 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-button {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    margin-left: 12px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.complete-toggle-button {
+    border-radius: 50%;
+    border: 1px solid #CCC;
+    margin: 0 16px 0 0;
+    width: 18px;
+    height: 18px;
+    align-self: center;
+    line-height: 12px;
+}
+
+.left-content-col {
+    display: flex;
+    align-items: center;
+}
+
+.right-content-col {
+    display: flex;
+}

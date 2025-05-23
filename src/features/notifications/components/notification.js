@@ -8,7 +8,7 @@ import './notification.css';
 const NotificationWrapper = styled.div`
     color: #FFF;
     border-radius: 8px;
-    padding: 1rem 1rem;
+    padding: 13px 30px 13px 16px;
     margin: 2px 2rem;
     opacity: 0.8;
 `
@@ -26,9 +26,8 @@ function Notification({ type, message }) {
         setVisible(false);
     }
 
-    return (
-        <>
-        {isVisible &&
+    if (isVisible) {
+        return (
             <NotificationWrapper
                 className="notification-container"
                 onClick={onHide}
@@ -38,11 +37,12 @@ function Notification({ type, message }) {
                     color: `${TYPES[type].color}`
                 }}
             >
-                <span className="font-700">{`${type}:`}</span> {message}
+                <p className='message'><span className="font-700">{`${type}:`}</span> {message}</p>
             </NotificationWrapper>
-        }
-        </>
-    )
+        )
+    }
+
+    return null;
 }
 
 Notification.propTypes = {

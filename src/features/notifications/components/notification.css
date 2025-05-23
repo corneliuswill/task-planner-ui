@@ -1,3 +1,7 @@
 .notification-container:last-child {
     margin-bottom: 64px;
 }
+
+.notification-container .message {
+    margin: 0;
+}

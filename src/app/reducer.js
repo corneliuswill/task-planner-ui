@@ -1,4 +1,4 @@
-import { COUNTER } from "../common/constants";
+import { COUNTER } from "../constants";
 
 import { ACTIONS } from "./actions";
 
@@ -8,10 +8,11 @@ const INITIAL_STATE = {
         counter: 0,
         isVisible: true
     },
-    taskPanel: {}
+    taskPanel: {},
+    isLoading: false
 }
 
-export default function uiReducer(state = INITIAL_STATE, action) {
+export default function appReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
         case ACTIONS.UPDATE_COUNTER:
             return updateCounterState(state, action);

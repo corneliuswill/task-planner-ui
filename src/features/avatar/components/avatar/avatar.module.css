@@ -1,3 +1,7 @@
+.avatar {
+    display: flex;
+}
+
 .circle {
     background-color: #557883;
     border-radius: 50%;

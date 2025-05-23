@@ -1,12 +1,12 @@
-import { getListsUrl, createListUrl, getUpdateListUrl } from '../../common/utils/url-utils';
-import { HTTP_METHODS } from '../../common/constants';
+import { getListsUrl, createListUrl, getUpdateListUrl } from '../../utils/url-utils';
+import { HTTP_METHODS } from '../../constants';
 
 /* ACTION TYPES */
 export const ACTIONS = {
     GET_LISTS__REQUEST: 'GET_LISTS__REQUEST',
     GET_LISTS__SUCCESS: 'GET_LISTS__SUCCESS',
     GET_LISTS__FAILURE: 'GET_LISTS__FAILURE',
-    SET_LISTS: 'SET_LISTS__REQUEST',
+    SET_LISTS: 'SET_LISTS',
     CREATE_LIST__REQUEST: 'CREATE_LIST__REQUEST',
     CREATE_LIST__SUCCESS: 'CREATE_LIST__SUCCESS',
     CREATE_LIST__FAILURE: 'CREATE_LIST__FAILURE',
@@ -82,3 +82,4 @@ export function setListsAction(lists) {
         lists
     }
 }
+
